@@ -8,12 +8,12 @@
 
 ## 四段安全防護
 
-四段防護（見 architecture.md 第 12 節）集中在 `src/guards.py`，每段都要用清楚的註解標出開始與結束：
+四段防護（見 architecture.md 第 12 節）寫在用到它的地方（`src/claude_runner.py`、`src/photo_store.py`、`src/excel_store.py`），位置見 README，搜尋 `==== 防護` 即可找到。每段都要用清楚的註解標出開始與結束：
 
 ```python
-# ===== 防護 N 開始：說明 =====
+# ==== 防護 N：說明 開始 ====
 ...
-# ===== 防護 N 結束 =====
+# ==== 防護 N 結束 ====
 ```
 
 - 防護 1：claude -p 讀不到 DATA_DIR 裡別人的照片和紀錄
